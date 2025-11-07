@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <title>PORTFOLIO</title>
+     <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Zia Hassan</h1>
+
+  <nav id="nav-links" aria-label="Primary navigation">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#Revieus">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hamburger" id="hamburger" tabindex="0" aria-label="Toggle menu" role="button" aria-expanded="false" aria-controls="nav-links">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  
+</header>
+
+<main class="container">
+
+  <section id="about" tabindex="0">
+    <h2>About Me</h2>
+    <p>Hello! I'm <strong>Zia Hassan</strong>, a passionate Front End Developer specialized in HTML, CSS, and JavaScript. I love creating beautiful, designs, and user-friendly websites that solve real problems.</p>
+  </section>
+
+  <section id="skills" tabindex="0">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      
+    </ul>
+  </section>
+
+  <section id="projects" tabindex="0">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card" tabindex="0">
+        <img src="image2.png" alt="pic One" />
+        <h3>Project One</h3>
+        <p>A modern responsive website built with React and CSS.</p>
+        <a href=" https://www.fiverr.com/s/e6KroBr " target="_blank" rel="noopener noreferrer">View on Fiverr</a>
+      </article>
+
+      <article class="card" tabindex="0">
+        <img src="image1.png" alt="pic two" />
+        <h3>Project Two</h3>
+        <p>A simple food website build with basic HTML, CSS, and JavaScript.</p>
+        <a href=" https://www.fiverr.com/s/e6KroBr " target="_blank" rel="noopener noreferrer">View on Fiverr</a>
+      </article>
+
+      <article class="card" tabindex="0">
+        <img src="image3.png" alt="pic Three" />
+        <h3>Project Three</h3>
+        <p>A modren design portfolio at low cost design with CSS3.</p>
+        <a href=" https://www.fiverr.com/s/e6KroBr " target="_blank" rel="noopener noreferrer">View on Fiverr</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="Revieus" tabindex="0">
+    <h2>Reviews</h2>
+    <div class="grid">
+      <article class="card testimonial-card" tabindex="0">
+        <p class="reviews-text">"Zia delivered an amazing website on time and exceeded our expectations."</p>
+        <footer class="reviews-footer">- Ali Hassan</footer>
+      </article>
+
+      <article class="card testimonial-card" tabindex="0">
+        <p class="reviews-text">"Very professional and skilled developer. Highly recommended!"</p>
+        <footer class="reviews-footer">- Ahmed Shaikh</footer>
+      </article>
+
+      <article class="card testimonial-card" tabindex="0">
+        <p class="reviews-text">"Zia’s work quality is outstanding and communication was great throughout."</p>
+        <footer class="reviews-footer">- Waqar Ahmed</footer>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" tabindex="0">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="ziah19445@gmail.com">ziah19445@gmail.com</a></p>
+    <p>Phone: +92 316-3107635</p>
+  </section>
+
+</main>
+
+<footer style="text-align:center; padding: 20px 0; background:#0077ff; color: white;">
+  <p>© 2025 Zia Hassan | Front End Developer</p>
+</footer>
+
+<script>
+
+  // Hamburger menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+
+    // Update aria-expanded for accessibility
+    const expanded = hamburger.classList.contains('active');
+    hamburger.setAttribute('aria-expanded', expanded);
+  });
+
+  // Keyboard support for hamburger
+  hamburger.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      hamburger.click();
+    }
+  });
+</script>
+
+</body>
+</html>
